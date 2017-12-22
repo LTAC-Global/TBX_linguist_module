@@ -22,14 +22,8 @@
     </pattern>
     
     <pattern id="module.linguist.termNote">
-        <rule context="ling:grammaticalNumber">
-            <assert test="parent::tbx:termSec or parent::tbx:termNoteGrp/parent::tbx:termSec">grammaticalNumber may only appear at the termSec level.</assert>
-            <assert test=".='singular' or .='plural' or .='dual' or .='mass' or .='otherNumber'">Permitted values of grammaticalNumber are: singular, plural, dual, mass, or otherNumber.</assert>
-        </rule>
-        <rule context="ling:register">
-            <assert test="parent::tbx:termSec or parent::tbx:termNoteGrp/parent::tbx:termSec">register may only appear at the termSec level.</assert>
-            <assert test=".='colloquialRegister' or .='neutralRegister' or .='technicalRegister' or .='in-houseRegister' or .='bench-levelRegister' or .='slangRegister' or .='vulgarRegister'">Permitted values of register are: 
-                colloquialRegister, neutralRegister, technicalRegister, in-houseRegister, bench-levelRegister, slangRegister, or vulgarRegister</assert>
+        <rule context="ling:grammaticalNumber|ling:register">
+            <assert test="parent::tbx:termSec or parent::tbx:termNoteGrp/parent::tbx:termSec">termNote elements must not occur outside the termSec level.</assert>
         </rule>
     </pattern>
     
