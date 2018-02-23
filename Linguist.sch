@@ -22,7 +22,7 @@
         <rule context="ling:grammaticalNumber">
             <assert test="parent::tbx:termSec or parent::tbx:termNoteGrp/parent::tbx:termSec">termNote elements must not occur outside the termSec level.</assert>
         </rule>
-        <rule context="ling:usageRegister|ling:register">
+        <rule context="ling:register"> <!-- note: this is also known as /usageRegister/ and should be converted to /register/ here -->
             <assert test="parent::tbx:termSec or parent::tbx:termNoteGrp/parent::tbx:termSec">termNote elements must not occur outside the termSec level.</assert>
         </rule>
         <rule context="ling:transferComment">
