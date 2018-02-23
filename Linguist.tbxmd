@@ -40,11 +40,8 @@ value of the name attribute. -->
                 <value>vulgarRegister</value>
             </contents>
         </termNoteSpec>
-        <adminSpec name="transferComment" datcatId="http://www.datcatinfo.net/datcat/DC-520">
-            <levels>
-                <level>langSec</level>
-            </levels>
+        <termNoteSpec name="transferComment" datcatId="http://www.datcatinfo.net/datcat/DC-520">
             <contents datatype="PCDATA"/>
-        </adminSpec>
+        </termNoteSpec>
     </datCatSet>
 </tbxmd>

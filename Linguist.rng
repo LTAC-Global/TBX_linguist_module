@@ -43,9 +43,6 @@
          <element name="reading">
             <text/>
          </element>
-         <element name="transferComment">
-            <text/>
-         </element>
       </choice>
    </define>
 
@@ -79,6 +76,9 @@
                <value>slangRegister</value>
                <value>vulgarRegister</value>
             </choice>
+         </element>
+         <element name="transferComment">
+            <text/>
          </element>
       </choice>
    </define>

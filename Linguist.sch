@@ -10,9 +10,6 @@
         <rule context="ling:reading">
             <assert test="parent::tbx:termSec or parent::tbx:adminGrp/parent::tbx:termSec">Reading must be at the term level.</assert>
         </rule>
-        <rule context="ling:transferComment">
-            <assert test="parent::tbx:langSec or parent::tbx:adminGrp/parent::tbx:langSec">transferComment may only be found at the langSec level.</assert>
-        </rule>
     </pattern>
     
     <pattern id="module.linguist.adminNote">
@@ -22,7 +19,13 @@
     </pattern>
     
     <pattern id="module.linguist.termNote">
-        <rule context="ling:grammaticalNumber|ling:register">
+        <rule context="ling:grammaticalNumber">
+            <assert test="parent::tbx:termSec or parent::tbx:termNoteGrp/parent::tbx:termSec">termNote elements must not occur outside the termSec level.</assert>
+        </rule>
+        <rule context="ling:usageRegister|ling:register">
+            <assert test="parent::tbx:termSec or parent::tbx:termNoteGrp/parent::tbx:termSec">termNote elements must not occur outside the termSec level.</assert>
+        </rule>
+        <rule context="ling:transferComment">
             <assert test="parent::tbx:termSec or parent::tbx:termNoteGrp/parent::tbx:termSec">termNote elements must not occur outside the termSec level.</assert>
         </rule>
     </pattern>
